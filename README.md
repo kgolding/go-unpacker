@@ -5,10 +5,10 @@ one string per byte each with a rune per bit (8 runes). The rune is used to popu
 
 Where each rune within the definition:
 
-	* `1` Must match a bit 1
-	* `0` Must match a bit 0
-	* `?` Ignored bit
-	* Otherwise is a returned variable being a single rune, with repeated runes having the bit's concatenated and converted to a `uint`
+* `1` Must match a bit 1
+* `0` Must match a bit 0
+* `?` Ignored bit
+* Otherwise is a variable placeholder being a single rune, with repeated runes having the bit's concatenated and converted to a `uint`
 
 The returned map will have a value for each of the variables e.g. in the code below "AAAABBBB" will decode the top 4 bits of the first byte (0xab) into m['A'] and the bottom 4 bits into m['B'].
 
